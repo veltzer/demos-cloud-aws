@@ -17,7 +17,7 @@ Notes
 ssh -i [secret_key.pem] ubuntu@[your_ip]
 ```
 
-* Make sure you allow ssh taffic into your instance from any address (`0.0.0.0`).
+* Make sure you allow ssh traffic into your instance from any address (`0.0.0.0`).
 
 * Make sure you launch your instance in a public subnet.
 
