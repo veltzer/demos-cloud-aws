@@ -1,4 +1,4 @@
-personal_ws-1.1 en 1022 
+personal_ws-1.1 en 1031 
 AARRR
 ACLs
 ADPlus
@@ -314,6 +314,7 @@ LFI
 LGPL
 LINQ
 LSTM
+LTS
 Leumi
 Lex
 Lippman
@@ -364,6 +365,7 @@ NCR
 NDK
 NFS
 NG
+NIC
 NIO
 NLP
 NMAP
@@ -395,6 +397,7 @@ OpenGL
 OpenJDK
 OpenMP
 OpenSL
+OpenSSH
 OpenShift
 OpenTelemetry
 Openwrt
@@ -424,6 +427,7 @@ PhpStorm
 Pipewire
 Powel
 PowerManager
+PowerShell
 Powertools
 Precompiled
 PresistentVolume
@@ -475,6 +479,7 @@ Runtime
 SAAS
 SCM
 SCONS
+SCP
 SDK
 SDLC
 SELinux
@@ -583,6 +588,7 @@ VCS
 VGW
 VLANs
 VM
+VM's
 VMWare
 VPC
 VPCs
@@ -607,6 +613,7 @@ Webapp
 Werror
 Wi
 WinDbg
+WinSCP
 Workspaces
 XFail
 XHR
@@ -690,6 +697,7 @@ crypto
 csh
 cve
 cyclictest
+datacenter
 dataset
 datetime
 ddup
@@ -811,6 +819,7 @@ ldd
 libc
 libuv
 lifecycle
+linux
 listOf
 livelock
 lmdb
