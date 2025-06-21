@@ -151,8 +151,7 @@ $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
-	$(Q)mkdir -p $(dir $@)
-	$(Q)touch $@
+	$(Q)pymakehelper touch_mkdir $@
 
 ##########
 # alldep #
