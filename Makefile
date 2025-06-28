@@ -40,7 +40,6 @@ ALL_SHELLCHECK:=$(addprefix out/, $(addsuffix .shellcheck, $(ALL_SH)))
 ALL_PY:=$(shell find . -type f -name "*.py" -and -not -path "./.venv/*" -and -not -path "./config/*" -printf "%P\n")
 ALL_SYNTAX:=$(addprefix out/,$(addsuffix .syntax, $(basename $(ALL_PY))))
 ALL_PYLINT:=$(addprefix out/,$(addsuffix .pylint, $(basename $(ALL_PY))))
-ALL_FLAKE8:=$(addprefix out/,$(addsuffix .flake8, $(basename $(ALL_PY))))
 ALL_MYPY:=$(addprefix out/,$(addsuffix .mypy, $(basename $(ALL_PY))))
 
 MD_SRC:=$(shell find exercises -type f -and -name "*.md")
@@ -135,10 +134,6 @@ $(ALL_SYNTAX): out/%.syntax: %.py
 $(ALL_PYLINT): out/%.pylint: %.py
 	$(info doing [$@])
 	$(Q)python -m pylint --reports=n --score=n $<
-	$(Q)pymakehelper touch_mkdir $@
-$(ALL_FLAKE8): out/%.flake8: %.py
-	$(info doing [$@])
-	$(Q)python -m flake8 $<
 	$(Q)pymakehelper touch_mkdir $@
 $(ALL_MYPY): out/%.mypy: %.py
 	$(info doing [$@])
