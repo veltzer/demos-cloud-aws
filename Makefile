@@ -11,8 +11,6 @@ DO_SHELLCHECK:=1
 DO_SYNTAX:=1
 # do you want to lint python files using pylit?
 DO_PYLINT:=1
-# do you want to lint python files using flake8?
-DO_FLAKE8:=1
 # do you want to lint python files using mypy?
 DO_MYPY:=1
 # do you want to run mdl on md files?
@@ -58,10 +56,6 @@ endif # DO_SYNTAX
 ifeq ($(DO_PYLINT),1)
 ALL+=$(ALL_PYLINT)
 endif # DO_PYLINT
-
-ifeq ($(DO_FLAKE8),1)
-ALL+=$(ALL_FLAKE8)
-endif # DO_FLAKE8
 
 ifeq ($(DO_MYPY),1)
 ALL+=$(ALL_MYPY)
