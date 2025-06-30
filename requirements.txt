@@ -53,7 +53,7 @@ pluggy==1.6.0
 pycmdtools==0.0.85
 pycodestyle==2.14.0
 pycparser==2.22
-pydmt==0.3.24
+pydmt==0.3.25
 pyfakeuse==0.0.9
 pyflakes==3.4.0
 Pygments==2.19.2
