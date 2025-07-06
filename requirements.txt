@@ -9,7 +9,7 @@ certifi==2025.6.15
 cffi==1.17.1
 charset-normalizer==3.4.2
 click==8.2.1
-coverage==7.9.1
+coverage==7.9.2
 cryptography==45.0.5
 dill==0.4.0
 docutils==0.21.2
@@ -95,7 +95,7 @@ tomlkit==0.13.3
 tqdm==4.67.1
 twine==6.1.0
 types-requests==2.32.4.20250611
-typing-extensions==4.14.0
+typing-extensions==4.14.1
 tzdata==2025.2
 unidecode==1.4.0
 urllib3==2.5.0
