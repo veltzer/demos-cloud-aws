@@ -5,7 +5,7 @@ babel==2.17.0
 beautifulsoup4==4.13.4
 black==25.1.0
 blinker==1.9.0
-certifi==2025.6.15
+certifi==2025.7.14
 cffi==1.17.1
 charset-normalizer==3.4.2
 click==8.2.1
@@ -16,7 +16,7 @@ docutils==0.21.2
 flake8==7.3.0
 flask==3.1.1
 gitdb==4.0.12
-gitpython==3.1.44
+gitpython==3.1.45
 html5lib==1.1
 id==1.5.0
 idna==3.10
@@ -29,7 +29,7 @@ jaraco-context==6.0.1
 jaraco-functools==4.2.1
 jeepney==0.9.0
 jinja2==3.1.6
-jsonschema==4.24.0
+jsonschema==4.25.0
 jsonschema-specifications==2025.4.1
 keyring==25.6.0
 logging-tree==1.10
@@ -53,7 +53,7 @@ pluggy==1.6.0
 pycmdtools==0.0.85
 pycodestyle==2.14.0
 pycparser==2.22
-pydmt==0.3.26
+pydmt==0.3.27
 pyfakeuse==0.0.9
 pyflakes==3.4.0
 pygments==2.19.2
@@ -95,7 +95,7 @@ tomlkit==0.13.3
 tqdm==4.67.1
 twine==6.1.0
 types-requests==2.32.4.20250611
-typing-extensions==4.14.0
+typing-extensions==4.14.1
 tzdata==2025.2
 unidecode==1.4.0
 urllib3==2.5.0
