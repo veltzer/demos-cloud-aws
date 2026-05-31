@@ -2,9 +2,15 @@
 
 Use the AWS console to create your first AWS instance.
 
+* Create your own `VPC` named `vpc-[yourname]`
+
+* Create at least one subnet in your `VPC`.
+
 * Go to the EC2 service
 
 * Click `Launch an instance`
+
+* Choose the subnet you create as the subnet to put the instance in.
 
 * Fill out the details, choose ubuntu as your operating system
 
