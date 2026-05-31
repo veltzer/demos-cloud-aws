@@ -10,6 +10,18 @@ In this exercise, you will set up an Application Load Balancer (ALB) in AWS to d
 - AWS CLI installed and configured (optional)
 - Completion of the EC2 exercise (you will reuse subnet/security-group/public-IP knowledge here)
 
+> **Heads up (restricted / student lab accounts):** the *first* `ALB` created in
+> an account requires a one-time service-linked role
+> (`AWSServiceRoleForElasticLoadBalancing`) to be auto-created. If your role
+> lacks the `iam:CreateServiceLinkedRole` permission — common in student lab
+> accounts — `CreateLoadBalancer` fails with an `AccessDenied` error and no ALB
+> is created. Your VPC, subnets, and security groups are not the problem. Ask an
+> admin to run this once in the account before starting:
+>
+> ```bash
+> aws iam create-service-linked-role --aws-service-name elasticloadbalancing.amazonaws.com
+> ```
+
 ## Note on the AMI
 
 This exercise uses the Amazon Linux AMI on purpose: the user data script below
