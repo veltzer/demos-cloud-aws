@@ -8,8 +8,6 @@ PCONFIG: list[str] = [
 PBUILD: list[str] = [
     "pyclassifiers",
     "pydmt",
-    "pymakehelper",
-    "pycmdtools",
 ]
 # test for python module
 PTEST: list[str] = [
@@ -30,8 +28,6 @@ CONFIG: list[str] = [
 BUILD: list[str] = [
     "pyclassifiers",
     "pydmt",
-    "pymakehelper",
-    "pycmdtools",
 ]
 # test for non python module
 TEST: list[str] = [
