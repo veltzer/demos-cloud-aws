@@ -1,10 +1,11 @@
 """ project definitions """
-name = "demos-docker"
-description_short = "Demos-docker shows you how to do things with docker"
+name = "demos-cloud-aws"
+description_short = "Demos for the AWS cloud"
 keywords = [
-    "docker",
-    "container",
-    "engine",
-    "docker-hub",
-    "images",
+    "aws",
+    "cloud",
+    "ec2",
+    "lambda",
+    "s3",
+    "terraform",
 ]
