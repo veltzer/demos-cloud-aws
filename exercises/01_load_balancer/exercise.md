@@ -8,6 +8,14 @@ In this exercise, you will set up an Application Load Balancer (ALB) in AWS to d
 - Basic knowledge of AWS EC2 and VPC concepts
 - Basic understanding of networking concepts
 - AWS CLI installed and configured (optional)
+- Completion of the EC2 exercise (you will reuse subnet/security-group/public-IP knowledge here)
+
+## Note on the AMI
+
+This exercise uses the Amazon Linux AMI on purpose: the user data script below
+uses `yum` and `httpd`, which are specific to Amazon Linux. If you prefer Ubuntu,
+you must rewrite the user data script to use `apt` and `apache2` instead. Do not
+mix the two.
 
 ## Exercise Steps
 
@@ -31,8 +39,9 @@ In this exercise, you will set up an Application Load Balancer (ALB) in AWS to d
 
 1. Launch two EC2 instances:
     - Amazon Linux 2 AMI
-    - t2.micro instance type
-    - Place in different subnets
+    - t2.micro instance type (free tier)
+    - Place each instance in a different subnet (one per availability zone) so the load balancer really spreads traffic
+    - Make sure they are in a public subnet and get a public IP, and open SSH (22) from your IP, so you can log in to debug
     - Add the following user data script:
 
 ```bash
@@ -49,6 +58,7 @@ echo "<h1>Hello from Instance $(hostname -f)</h1>" > /var/www/html/index.html
     - Inbound Rules:
         - HTTP (80) from ALB security group
         - SSH (22) from your IP
+    - Note: the ALB security group (`alb-sg`) does not exist until Part 3. You can either create `alb-sg` first as an empty group and reference it here, or temporarily allow HTTP (80) from anywhere and tighten it to `alb-sg` once the ALB exists. The point is that the web servers should accept HTTP only from the load balancer, not from the whole internet.
 
 ### Part 3: Create the Load Balancer
 
