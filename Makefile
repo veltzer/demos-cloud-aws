@@ -40,7 +40,7 @@ ALL_SYNTAX:=$(addprefix out/,$(addsuffix .syntax, $(basename $(ALL_PY))))
 ALL_PYLINT:=$(addprefix out/,$(addsuffix .pylint, $(basename $(ALL_PY))))
 ALL_MYPY:=$(addprefix out/,$(addsuffix .mypy, $(basename $(ALL_PY))))
 
-MD_SRC:=$(shell find exercises -type f -and -name "*.md")
+MD_SRC:=$(shell find exercises docs -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
