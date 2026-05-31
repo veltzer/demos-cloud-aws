@@ -1,2 +1,2 @@
 # demos-aws
-Demos for the AWS clloud
+Demos for the AWS cloud
