@@ -25,6 +25,17 @@ src_dirs = ["config"]
 src_dirs = ["exercises", "docs", "config"]
 args = ["--severity=error", "--shell=bash"]
 
+# Tera templating — renders tera.templates/**/*.tera to the repo (e.g.
+# tera.templates/README.md.tera -> README.md). dep_inputs lists the config
+# files the templates read via load_python() so renders rebuild on change.
+[processor.tera]
+dep_inputs = [
+	"config/project.py",
+	"config/personal.py",
+]
+
 [analyzer.markdown]
+
+[analyzer.tera]
 
 [analyzer.python]

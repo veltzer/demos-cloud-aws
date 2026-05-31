@@ -1,0 +1,3 @@
+## Exercises
+
+- Currently there are {{ git_count_files(pattern="exercises/*/exercise.md") }} exercises in this repo.

@@ -1,0 +1,17 @@
+{% set project = load_python(path="config/project.py") -%}
+{% set personal = load_python(path="config/personal.py") -%}
+# {{ project.name }}
+
+{{ project.description_short }}
+
+website: [website](https://{{ personal.github_username }}.github.io/{{ project.name }})
+
+## Build
+
+{% for wf in workflow_names() -%}
+![{{ wf.name }}](https://github.com/{{ personal.github_username }}/{{ project.name }}/workflows/{{ wf.name }}/badge.svg)
+{% endfor %}
+{% include "tera.snippets/exercises.md.tera" %}
+## Contact
+
+{{ personal.fullname }} [{{ personal.email }}](mailto:{{ personal.email }}), © {{ copyright_years() }}
