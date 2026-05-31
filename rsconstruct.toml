@@ -1,0 +1,37 @@
+# System (apt) and pip dependencies needed to run the checks below.
+# Installed by `rsconstruct tools install-deps --yes`.
+[dependencies]
+pip = [
+	"pymakehelper",
+]
+
+# Markdown linting — replaces the Makefile `mdl` rule (DO_MD_MDL), which ran
+# `mdl` over every *.md under exercises/ and docs/.
+[processor.mdl]
+src_dirs = ["exercises", "docs"]
+
+# Spell checking — replaces the Makefile `aspell` rule (DO_MD_ASPELL), which
+# ran aspell over every *.md under exercises/ and docs/.
+[processor.zspell]
+src_dirs = ["exercises", "docs"]
+
+# Python checks over the config/ tree. The Makefile applied syntax-check
+# (DO_SYNTAX), pylint (DO_PYLINT) and mypy (DO_MYPY) to all *.py files; the
+# only *.py in this repo live under config/. ruff subsumes the syntax check
+# and pylint-style linting; mypy covers the typing.
+[processor.ruff]
+src_dirs = ["config"]
+
+[processor.mypy]
+src_dirs = ["config"]
+
+# Shell-script linting — replaces the Makefile `shellcheck` rule
+# (DO_SHELLCHECK). No *.sh files exist outside .venv/config today, but this
+# keeps the check in place so any future scripts are covered.
+[processor.shellcheck]
+src_dirs = ["exercises", "docs", "config"]
+args = ["--severity=error", "--shell=bash"]
+
+[analyzer.markdown]
+
+[analyzer.python]
