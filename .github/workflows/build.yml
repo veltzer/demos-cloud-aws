@@ -8,6 +8,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    env:
+      # rsconstruct installs the `mdl` linter via `gem install`, which by
+      # default targets the system gem dir (/var/lib/gems) that the runner
+      # user cannot write to. Point GEM_HOME at a writable location and put
+      # its bin dir on PATH so both the install and the resulting executable
+      # work without sudo.
+      GEM_HOME: ${{ github.workspace }}/.gems
     steps:
     - name: checkout
       uses: actions/checkout@v4
@@ -23,6 +30,8 @@ jobs:
           -o /usr/local/bin/rsconstruct
         chmod +x /usr/local/bin/rsconstruct
         rsconstruct version
+    - name: gem-path
+      run: echo "${{ github.workspace }}/.gems/bin" >> "$GITHUB_PATH"
     - name: install-deps
       run: rsconstruct tools install-deps --yes
     - name: install-tools
