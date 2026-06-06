@@ -18,3 +18,9 @@ subnet
 ubuntu
 vpc
 wsl
+amazonaws
+elasticloadbalancing
+presigned
+subnets
+url
+warmup

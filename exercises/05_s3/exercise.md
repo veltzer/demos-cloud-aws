@@ -76,8 +76,9 @@ aws s3 website s3://my-website-yourname/ --index-document index.html
     credentials, so you must do two things that the private exercise told you to
     avoid:
 
-    1. Turn off `Block Public Access` for this bucket.
-    2. Attach a bucket policy that allows public `s3:GetObject`:
+* Turn off `Block Public Access` for this bucket.
+
+* Attach a bucket policy that allows public `s3:GetObject`:
 
 ```json
 {
@@ -94,14 +95,14 @@ aws s3 website s3://my-website-yourname/ --index-document index.html
 
 * Open the website endpoint in a browser. The URL form is:
 
-```
+```text
 http://<bucket-name>.s3-website-<region>.amazonaws.com
 ```
 
-    (the exact host varies by region; the console shows the endpoint under
-    Properties -> Static website hosting). Note this is `http`, served from the
-    `s3-website-` host, which is different from the normal `s3.amazonaws.com`
-    object URL.
+(the exact host varies by region; the console shows the endpoint under
+Properties -> Static website hosting). Note this is `http`, served from the
+`s3-website-` host, which is different from the normal `s3.amazonaws.com`
+object URL.
 
 * Confirm you can reach the page with `curl` and no credentials:
 

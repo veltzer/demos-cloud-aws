@@ -10,7 +10,7 @@ website: [website](https://veltzer.github.io/demos-cloud-aws)
 
 ## Exercises
 
-- Currently there are 10 exercises in this repo.
+- Currently there are 11 exercises in this repo.
 
 ## Contact
 
