@@ -24,3 +24,7 @@ presigned
 subnets
 url
 warmup
+kubectl
+kubernetes
+namespace
+serverless

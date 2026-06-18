@@ -1,5 +1,15 @@
 # Terraform with AWS
 
+So far you have been clicking around the AWS console to create resources. That
+works, but it is not repeatable: nobody can see what you did, you cannot review
+it, and you cannot reliably tear it all down again. `Terraform` is an
+infrastructure-as-code tool: you *describe* the resources you want in text files
+(using a language called `HCL`), and `Terraform` figures out what to create,
+change, or delete to make reality match your description. The same files can be
+committed to `git`, reviewed, and applied by anyone, and a single
+`terraform destroy` cleans up exactly what `Terraform` created. In this exercise
+you start with a single resource and work up to a full reachable machine.
+
 ## Stage one
 
 * install `Terraform` on your platform

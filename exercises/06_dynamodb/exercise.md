@@ -1,5 +1,15 @@
 # DynamoDB exercise
 
+`DynamoDB` is AWS's managed `NoSQL` database. Unlike a relational database you do
+not define columns up front or run `SQL`; you store and retrieve items (think
+`JSON` documents) by their key. It is fully managed and scales automatically, so
+there is no server to run and, in `On-demand` mode, no capacity to plan. The
+catch is that it is fast and cheap only when you look items up by their key:
+queries that a relational database does easily (search by an arbitrary field,
+join two tables) are awkward or expensive here, so the shape of your key matters
+a lot. In this exercise you create a table, put and fetch items by key from
+`python`, and see what `scan` costs you.
+
 * Create a `DynamoDB` table (give it a name that includes your name).
 
 * Choose a `partition key` (also called the hash key), for example `id` of type

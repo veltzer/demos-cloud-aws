@@ -1,5 +1,13 @@
 # SQS exercise
 
+`SQS` (Simple Queue Service) is AWS's managed message queue. One part of your
+system puts messages into the queue and another part pulls them out and
+processes them, without the two ever talking to each other directly. This
+decouples producers from consumers: the producer does not wait for the consumer,
+work can pile up safely when the consumer is slow, and you can add more consumers
+to drain the queue faster. In this exercise you create a queue and send and
+receive messages from your own `python` code.
+
 * Create an `SQS` queue (give it your name).
 
 * Choose a `Standard` queue (not a `FIFO` queue) unless you specifically want
@@ -68,6 +76,15 @@ for msg in resp.get("Messages", []):
     `WaitTimeSeconds` (long polling) and try a few times if you get nothing.
 
 * A message that you receive but do not delete will reappear after the
-    `visibility timeout`. This is by design.
+    `visibility timeout`. This is by design. While the timeout is running the
+    message is hidden from other consumers so two consumers do not process the
+    same message at once; if the consumer crashes before deleting it, the
+    message comes back and someone else can pick it up.
+
+* `Standard` queues guarantee at-least-once delivery, not exactly-once: a
+    message can occasionally be delivered more than once, and the order is not
+    guaranteed. Write your consumer so that processing the same message twice is
+    harmless. A `FIFO` queue gives strict ordering and exactly-once processing
+    but has lower throughput; that is the trade-off.
 
 * When you are done, delete the queue so it does not linger.

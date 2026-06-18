@@ -1,5 +1,14 @@
 # Lambda exercise
 
+`Lambda` is AWS's serverless compute service. Instead of launching an `EC2`
+instance and keeping it running, you upload a single function and AWS runs it on
+demand, in response to an event, and bills you only for the milliseconds it
+actually runs. There is no server for you to start, patch, or stop. The function
+is short-lived: it receives an `event`, does its work, returns, and goes away. In
+this exercise you write a trivial function, run it by hand, and then wire it up
+so that it runs automatically whenever a message lands in the `SQS` queue from
+the previous exercise.
+
 * Create a lambda function that simply prints "hello, world!"
 
 * Use any language you like (easiest is `python` but you can use other
@@ -59,3 +68,19 @@ def handler(event, context):
 
 * Send a message to the queue (from the console or with the `SQS` exercise
     script) and confirm in `CloudWatch` logs that your function ran.
+
+Notes
+
+* If the `Test` button reports an error like "handler not found", the handler
+    string you configured does not match your code. The handler is
+    `[file name without .py].[function name]` — for the example above, with a
+    file `lambda_function.py`, the handler is `lambda_function.handler`.
+
+* When `SQS` triggers the function but the messages never disappear from the
+    queue and keep being retried, your function is throwing an exception. `SQS`
+    only deletes the messages when the function returns successfully; a failure
+    sends them back to the queue. Read the `CloudWatch` logs to find the error.
+
+* When you are done, delete the event source mapping (the `SQS` trigger) and the
+    lambda function so they do not linger. Deleting the function does not delete
+    its `CloudWatch` log group; delete that too if you want a clean account.
