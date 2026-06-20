@@ -22,13 +22,13 @@ A few things to know before you start:
 
 1. Sign in to the [AWS console](https://console.aws.amazon.com/).
 
-2. Go to the `IAM` service (search for "IAM" in the top search bar).
+1. Go to the `IAM` service (search for "IAM" in the top search bar).
 
-3. In the left menu choose `Users`, then `Create user`.
+1. In the left menu choose `Users`, then `Create user`.
 
-4. Give the user a name (for example your own name) and click `Next`.
+1. Give the user a name (for example your own name) and click `Next`.
 
-5. For permissions, attach the policies the exercise needs. For the course you
+1. For permissions, attach the policies the exercise needs. For the course you
     can attach a broad managed policy such as `AmazonSQSFullAccess`,
     `AmazonS3FullAccess`, etc., or `AdministratorAccess` for simplicity in a
     throwaway training account. Click `Next`, then `Create user`.
@@ -37,17 +37,17 @@ A few things to know before you start:
 
 1. In `IAM` -> `Users`, click the user you want the key for.
 
-2. Open the `Security credentials` tab.
+1. Open the `Security credentials` tab.
 
-3. Scroll to `Access keys` and click `Create access key`.
+1. Scroll to `Access keys` and click `Create access key`.
 
-4. Choose a use case. Pick `Command Line Interface (CLI)` (or
+1. Choose a use case. Pick `Command Line Interface (CLI)` (or
     `Local code` / `Application running outside AWS`). Acknowledge the warning
     and click `Next`.
 
-5. (Optional) add a description tag, then click `Create access key`.
+1. (Optional) add a description tag, then click `Create access key`.
 
-6. You now see the **Access key ID** and the **Secret access key**. Click
+1. You now see the **Access key ID** and the **Secret access key**. Click
     `Show` to reveal the secret, and either copy both values somewhere safe or
     click `Download .csv file`. This is your only chance to see the secret.
 
@@ -83,7 +83,7 @@ When you are done with the exercises, or if a key may have leaked, delete it:
 
 1. `IAM` -> `Users` -> your user -> `Security credentials` -> `Access keys`.
 
-2. Find the key by its Access Key ID, choose `Actions` -> `Deactivate`, then
+1. Find the key by its Access Key ID, choose `Actions` -> `Deactivate`, then
     `Delete`.
 
 To rotate, create a new key, update `aws configure` with the new values, verify

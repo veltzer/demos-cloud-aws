@@ -28,3 +28,4 @@ kubectl
 kubernetes
 namespace
 serverless
+teardown
