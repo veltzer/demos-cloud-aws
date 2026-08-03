@@ -33,9 +33,9 @@ jobs:
     - name: gem-path
       run: echo "${{ github.workspace }}/.gems/bin" >> "$GITHUB_PATH"
     - name: install-deps
-      run: rsconstruct tools install-deps --yes
+      run: rsconstruct tools install-deps
     - name: install-tools
-      run: rsconstruct tools install --yes
+      run: rsconstruct tools install
     - name: build
       run: rsconstruct build
     - name: status
