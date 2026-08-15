@@ -4,7 +4,6 @@ Ubuntu system level depenencies for this project
 
 import platform
 
-
 desktop = platform.freedesktop_os_release()
 VERSION_ID = desktop["VERSION_ID"]
 
