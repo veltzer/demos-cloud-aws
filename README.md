@@ -1,17 +1,17 @@
-# demos-cloud-aws
+## demos-cloud-aws
 
-Demos for the AWS cloud
+version: 0.0.1
 
-website: [website](https://veltzer.github.io/demos-cloud-aws)
+description: Demos for the AWS cloud
+
+website: https://veltzer.github.io/demos-cloud-aws
 
 ## Build
 
 ![build](https://github.com/veltzer/demos-cloud-aws/workflows/build/badge.svg)
 
-## Exercises
-
-- Currently there are 11 exercises in this repo.
-
 ## Contact
 
-Mark Veltzer [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com), © 2025, 2026
+chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
+
+Mark Veltzer, Copyright © 2025, 2026
