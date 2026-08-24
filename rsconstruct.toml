@@ -46,17 +46,6 @@ src_dirs = ["config", "exercises"]
 [processor.mypy]
 src_dirs = ["config", "exercises"]
 
-[processor.requirements]
-src_dirs = ["config"]
-
-# ─── shell ───────────────────────────────────────────────────────────────────
-
-[processor.shellcheck]
-src_dirs = ["exercises", "docs", "config"]
-args = ["--severity=error", "--shell=bash"]
-
-# ─── lua ─────────────────────────────────────────────────────────────────────
-
 [processor.luacheck]
 src_dirs = ["config"]
 
@@ -64,12 +53,6 @@ src_dirs = ["config"]
 
 [processor.taplo]
 src_dirs = ["."]
-
-[processor.eslint]
-src_dirs = ["config"]
-args = ["-c", "config/eslint.config.js"]
-
-# ─── merged from rsconstruct.local.toml ─────────────────────────────────────
 
 # Runtime deps so CI installs what the code imports (pylint/mypy resolve them).
 [dependencies]
