@@ -1,9 +1,0 @@
-# Repo-specific overlay. Deep-merged over the canonical rsconstruct.toml.
-
-# Runtime deps so CI installs what the code imports (pylint/mypy resolve them).
-[dependencies]
-pip = [
-    "boto3",
-    "boto3-stubs",
-    "pyclassifiers",
-]
