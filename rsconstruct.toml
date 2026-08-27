@@ -53,11 +53,3 @@ src_dirs = ["config"]
 
 [processor.taplo]
 src_dirs = ["."]
-
-# Runtime deps so CI installs what the code imports (pylint/mypy resolve them).
-[dependencies]
-pip = [
-    "boto3",
-    "boto3-stubs",
-    "pyclassifiers",
-]
