@@ -247,12 +247,12 @@ version = "0.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "boto3" },
-    { name = "boto3-stubs" },
     { name = "pyclassifiers" },
 ]
 
 [package.dev-dependencies]
 dev = [
+    { name = "boto3-stubs" },
     { name = "mypy" },
     { name = "pylint" },
     { name = "pytest" },
@@ -262,12 +262,12 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "boto3" },
-    { name = "boto3-stubs" },
     { name = "pyclassifiers" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "boto3-stubs" },
     { name = "mypy" },
     { name = "pylint" },
     { name = "pytest" },
