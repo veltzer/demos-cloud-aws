@@ -14,8 +14,8 @@ ssh -V
 ```
 
 * If you see a version string, you are ready. If the command is not found,
-    install the `OpenSSH` client: `Settings` then `Apps` then
-    `Optional features`, add `OpenSSH Client`.
+  install the `OpenSSH` client: `Settings` then `Apps` then
+  `Optional features`, add `OpenSSH Client`.
 
 ## Connect to your instance
 
@@ -26,8 +26,8 @@ ssh -i C:\path\to\your-key.pem ubuntu@your_public_ip
 ```
 
 * The user name depends on the operating system of the instance: `ubuntu` for
-    `ubuntu`, `ec2-user` for Amazon Linux. Use the public `IP`, not the private
-    one.
+  `ubuntu`, `ec2-user` for Amazon Linux. Use the public `IP`, not the private
+  one.
 
 ## Fixing permissions on the .pem file (the Windows gotcha)
 
@@ -60,14 +60,14 @@ After this, `ssh -i your-key.pem ...` will work.
 ## Common problems
 
 * `Permissions ... are too open`: you have not fixed the key file permissions;
-    run the `icacls` commands above.
+  run the `icacls` commands above.
 
 * `Connection timed out`: a networking problem, not an `ssh` problem. Check the
-    public `IP`, the security group rule for port `22`, and that the subnet is
-    public.
+  public `IP`, the security group rule for port `22`, and that the subnet is
+  public.
 
 * `Permission denied (publickey)`: almost always the wrong user name or the
-    wrong key file.
+  wrong key file.
 
 * Make sure you use the correct path to the `.pem` file. In `PowerShell` you can
-    use either `\` or `/` as a path separator.
+  use either `\` or `/` as a path separator.

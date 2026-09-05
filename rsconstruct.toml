@@ -28,6 +28,7 @@ dep_auto = [
 
 [processor.rumdl]
 src_dirs = ["docs", "exercises"]
+src_files = ["README.md"]
 
 [processor.zspell]
 src_dirs = ["docs", "exercises"]

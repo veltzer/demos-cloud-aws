@@ -3,7 +3,7 @@
 * Create an `S3` bucket (give it a name that includes your name).
 
 * Bucket names are globally unique across all of AWS, not just your account, so
-    you may need to try a few names before one is free.
+  you may need to try a few names before one is free.
 
 * Pay attention to the region you create the bucket in.
 
@@ -12,18 +12,18 @@
 * Download it back to your laptop and confirm it is the same file.
 
 * Write a `python` script using `boto3` that uploads a file, lists the objects
-    in the bucket, and downloads a file.
+  in the bucket, and downloads a file.
 
 * Run the script from your laptop.
 
 Notes
 
 * You need credentials on your laptop for `boto3` to work (see the `SQS`
-    exercise: create an `IAM` user, install the AWS `CLI`, run `aws configure`).
-    Never commit your keys to `git`.
+  exercise: create an `IAM` user, install the AWS `CLI`, run `aws configure`).
+  Never commit your keys to `git`.
 
 * By default new buckets block all public access. This is a good thing. For this
-    exercise keep the bucket private and access it only through your credentials.
+  exercise keep the bucket private and access it only through your credentials.
 
 * A minimal `python` example looks like this:
 
@@ -45,8 +45,8 @@ s3.download_file(bucket, "remote.txt", "downloaded.txt")
 ```
 
 * The object `key` is the name of the object inside the bucket. It can contain
-    `/` characters, which the console shows as folders, but `S3` has no real
-    folders.
+  `/` characters, which the console shows as folders, but `S3` has no real
+  folders.
 
 ## Hosting a static web server out of the bucket
 
@@ -55,8 +55,8 @@ s3.download_file(bucket, "remote.txt", "downloaded.txt")
 bucket into a simple web server.
 
 * Create a second bucket for this part (give it a name that includes your name),
-    or reuse your bucket if you are happy to make it public. Keep the *private*
-    bucket from the main exercise private.
+  or reuse your bucket if you are happy to make it public. Keep the *private*
+  bucket from the main exercise private.
 
 * Create an `index.html` and upload it as the object key `index.html`:
 
@@ -66,15 +66,15 @@ bucket into a simple web server.
 ```
 
 * Enable static website hosting on the bucket and set the index document to
-    `index.html` (optionally an error document such as `error.html`):
+  `index.html` (optionally an error document such as `error.html`):
 
 ```bash
 aws s3 website s3://my-website-yourname/ --index-document index.html
 ```
 
 * Unlike the main exercise, a website bucket must be reachable *without*
-    credentials, so you must do two things that the private exercise told you to
-    avoid:
+  credentials, so you must do two things that the private exercise told you to
+  avoid:
 
 * Turn off `Block Public Access` for this bucket.
 
@@ -111,17 +111,17 @@ curl http://my-website-yourname.s3-website-us-east-1.amazonaws.com
 ```
 
 * Think about why this is *not* the same as the presigned URL below: the website
-    is permanently public to everyone, while a presigned URL grants temporary
-    access to a private object.
+  is permanently public to everyone, while a presigned URL grants temporary
+  access to a private object.
 
 * When you are done, remember to re-enable `Block Public Access` or delete the
-    website bucket so you do not leave public data lying around.
+  website bucket so you do not leave public data lying around.
 
 ## Bonus
 
 * Generate a `presigned URL` for one of your objects and open it in a browser.
-    This lets someone download a private object for a limited time without
-    needing AWS credentials.
+  This lets someone download a private object for a limited time without
+  needing AWS credentials.
 
 ```python
 url = s3.generate_presigned_url(
@@ -133,7 +133,7 @@ print(url)
 ```
 
 * Enable versioning on the bucket, upload the same key twice, and see both
-    versions.
+  versions.
 
 * When you are done, empty the bucket (you cannot delete a non-empty bucket) and
-    then delete the bucket so it does not linger.
+  then delete the bucket so it does not linger.
