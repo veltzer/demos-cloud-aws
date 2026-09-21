@@ -13,7 +13,6 @@ dependencies = [
 dev = [
     "boto3-stubs",
     "mypy",
-    "pylint",
     "pytest",
     "ruff",
 ]
