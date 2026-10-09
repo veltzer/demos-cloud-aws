@@ -44,7 +44,7 @@ src_dirs = ["config", "exercises"]
 [processor.checker.mypy]
 src_dirs = ["config", "exercises"]
 
-[processor.checker.luacheck]
+[processor.checker.iluacheck]
 src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
