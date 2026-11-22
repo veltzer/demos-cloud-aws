@@ -1,6 +1,7 @@
 # AWS Load Balancer Setup Exercise
 
 ## Objective
+
 In this exercise, you will set up an Application Load Balancer (ALB) in AWS to distribute traffic between two EC2 instances running a simple web application.
 
 ## Prerequisites
