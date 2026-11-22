@@ -5,7 +5,7 @@
 
 description: Demos for the AWS cloud
 
-project website: https://veltzer.github.io/demos-cloud-aws
+project website: <https://veltzer.github.io/demos-cloud-aws>
 
 author: Mark Veltzer
 
