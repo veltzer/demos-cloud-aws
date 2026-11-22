@@ -5,6 +5,7 @@
 In this exercise, you will set up an Application Load Balancer (ALB) in AWS to distribute traffic between two EC2 instances running a simple web application.
 
 ## Prerequisites
+
 - An AWS account with appropriate permissions
 - Basic knowledge of AWS EC2 and VPC concepts
 - Basic understanding of networking concepts
@@ -108,6 +109,7 @@ echo "<h1>Hello from Instance $(hostname -f)</h1>" > /var/www/html/index.html
 ### Part 5: Clean Up
 
 Remember to delete resources in this order to avoid additional charges:
+
 1. Load Balancer
 1. Target Group
 1. EC2 Instances
@@ -115,6 +117,7 @@ Remember to delete resources in this order to avoid additional charges:
 1. VPC and associated resources
 
 ## Expected Outcome
+
 - A functioning Application Load Balancer distributing traffic between two EC2 instances
 - Ability to see different instance responses when refreshing the browser
 - Understanding of basic AWS networking and load balancing concepts
