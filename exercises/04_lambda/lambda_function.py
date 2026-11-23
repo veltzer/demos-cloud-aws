@@ -9,8 +9,8 @@ The configured handler is "lambda_function.handler" -> [this file].[this func].
 """
 
 
-# "context" is part of the AWS-mandated handler signature and is unused here.
-def handler(event, context):  # pylint: disable=unused-argument
+# The second parameter is the AWS-mandated "context" argument, unused here.
+def handler(event, _context):
     print("hello, world!")
     # if this came from SQS, print the message bodies too
     for record in event.get("Records", []):
