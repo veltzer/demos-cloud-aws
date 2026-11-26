@@ -29,10 +29,6 @@ min-severity = "warn"
 search-path = [
     ".",
 ]
-# Third-party libraries without type information.
-ignore-missing-imports = [
-    "boto3.*",
-]
 
 [tool.pyrefly.errors]
 no-any-return = "error"
