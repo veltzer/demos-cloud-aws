@@ -8,9 +8,11 @@ automatically once this function returns successfully.
 The configured handler is "lambda_function.handler" -> [this file].[this func].
 """
 
+from typing import Any
+
 
 # The second parameter is the AWS-mandated "context" argument, unused here.
-def handler(event, _context):
+def handler(event: dict[str, Any], _context) -> dict[str, int | str]:
     print("hello, world!")
     # if this came from SQS, print the message bodies too
     for record in event.get("Records", []):
