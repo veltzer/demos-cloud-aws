@@ -66,3 +66,12 @@ args = ["--offline", "--no-progress", "--persona=auditor"]
 [processor.checker.suppressions]
 src_dirs = [".github", "config", "docs", "exercises"]
 src_files = [".yamllint.yaml", "README.md"]
+
+# ─── terraform ───────────────────────────────────────────────────────────────
+
+# every Terraform file parses and is formatted as `terraform fmt` formats it
+[processor.checker.script.terraform_fmt]
+command = "terraform"
+args = ["fmt", "-check", "-diff", "-no-color"]
+src_dirs = ["exercises/04_lambda"]
+src_extensions = [".tf", ".tfvars"]
